@@ -28,7 +28,7 @@ Deberán crear un contexto global en su aplicación que ponga a disposición la 
 - Información traída por la API (pueden utilizar fetch o axios para realizar la llamada)
 - Para el manejo y actualización del estado global deberán implementar el hook useReducer. Con dicho hook deberán implementar el cambio de tema de colores (con un botón en la app específico para ello dentro de Navbar), de claro a oscuro y viceversa.
 
-### Creación de rutas
+### Creación de rutas {REALIZADO}
 
 Utilizando React Router deberán crear las siguientes direcciones descriptas en [rutas](#rutas)
 
@@ -50,9 +50,13 @@ En esta página se deberá mostrar un listado en forma de grilla de los dentista
 
 Se deberá tener en cuenta lo siguiente:
 
-- Deberá ser la página de inicio de la web.
-- La grilla deberá mostrar una [Card](/src/Components/Card.jsx) por cada dentista devuelto por la API.
-- Cada dentista deberá contener `name` y `username`, junto con un boton `ADD FAV` (para agregar al localStorage como fav) y un `link` que permita su navegacion a la pagina _dentist/:id_ en base al id del dentista.
+# - Deberá ser la página de inicio de la web.
+
+# - La grilla deberá mostrar una [Card](/src/Components/Card.jsx) por cada dentista devuelto por la API.
+
+- -Cada dentista deberá contener `name` y `username`,
+  -junto con un boton `ADD FAV` (para agregar al localStorage como fav)
+  -y un `link` que permita su navegacion a la pagina _dentist/:id_ en base al id del dentista.
 - Cada Card debe integrar la funcionalidad de agregar a destacados
 
 ### Pagina 2: Contacto
