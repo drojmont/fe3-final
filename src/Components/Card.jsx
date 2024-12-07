@@ -1,6 +1,6 @@
 import React from "react";
 import { useContextStates } from "./utils/global.context";
-import funReducer from "./utils/reducer";
+import { Link } from "react-router-dom";
 
 const Card = ({ name, username, id }) => {
   const { state, dispatch } = useContextStates();
@@ -17,14 +17,16 @@ const Card = ({ name, username, id }) => {
 
   return (
     <div className="card">
-      {/* En cada card deberan mostrar en name - username y el id */}
+      {/* DONE: En cada card deberan mostrar en name - username y el id */}
 
       {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
 
-      {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-      <h1>{name}</h1>
-      <h2>{id}</h2>
-      <h3>{username}</h3>
+      {/* DONE: Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
+      <Link to={`/detail/${id}`}>
+        <h1>{name}</h1>
+        <h2>{id}</h2>
+        <h3>{username}</h3>
+      </Link>
       <button onClick={addFav} className="favButton">
         Add fav
       </button>

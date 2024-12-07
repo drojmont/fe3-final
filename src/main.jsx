@@ -16,8 +16,9 @@ root.render(
     <ContextProvider>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/favs" element={<Favs />} />
+          <Route path="/detail/:id" element={<Detail />} />
           <Route path="/detail" element={<Detail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<h1>Page not found</h1>} />
