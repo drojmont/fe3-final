@@ -13,6 +13,9 @@ const funReducer = (state, action) => {
         favs: state.favs.set(action.payload[0], action.payload[1]),
       };
 
+    case "DETAILS":
+      return { ...state, detailsid: action.payload };
+
     default:
       state;
   }

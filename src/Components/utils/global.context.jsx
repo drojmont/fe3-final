@@ -8,7 +8,12 @@ import React, {
 import axios from "axios";
 import funReducer from "./reducer";
 
-const initialState = { theme: "", data: [], favs: new Map() };
+const initialState = {
+  theme: "",
+  data: [],
+  favs: new Map(),
+  detailsid: undefined,
+};
 
 const ContextGlobal = createContext();
 

@@ -50,9 +50,9 @@ En base al tema (claro u oscuro) consumido del contexto global, estilar las cuat
 
 ### Pagina 1: Inicio Home
 
-En esta página se deberá mostrar un listado en forma de grilla de los dentistas devueltos por la API
+#### En esta página se deberá mostrar un listado en forma de grilla de los dentistas devueltos por la API
 
-Se deberá tener en cuenta lo siguiente:
+#### Se deberá tener en cuenta lo siguiente:
 
 #### - Deberá ser la página de inicio de la web.
 
@@ -62,9 +62,9 @@ Se deberá tener en cuenta lo siguiente:
 
 #### -junto con un boton `ADD FAV` (para agregar al localStorage como fav)
 
--y un `link` que permita su navegacion a la pagina _dentist/:id_ en base al id del dentista.
+#### -y un `link` que permita su navegacion a la pagina _dentist/:id_ en base al id del dentista.
 
-#- Cada Card debe integrar la funcionalidad de agregar a destacados
+#### - Cada Card debe integrar la funcionalidad de agregar a destacados
 
 ### Pagina 2: Contacto
 
@@ -77,17 +77,21 @@ En esta pagina deberán implementar un [Form](/src/Components/Form.jsx) (con sus
 
 ### Pagina 3: Detalle del dentista
 
-En esta página se deberá mostrar un detalle de un dentista individual de la API.
+#### En esta página se deberá mostrar un detalle de un dentista individual de la API.
 
-Se deberá tener en cuenta lo siguiente:
+#### Se deberá tener en cuenta lo siguiente:
 
 ### - Deberá estar en la ruta `/dentist/:id`.
 
-- La página deberá indicar al menos la siguiente información:
-  - Nombre del personaje
-  - Email
-  - Telefono
-  - Sitio web
+### - La página deberá indicar al menos la siguiente información:
+
+#### - Nombre del personaje
+
+#### - Email
+
+#### - Telefono
+
+#### - Sitio web
 
 ### Pagina 4: Destacados
 

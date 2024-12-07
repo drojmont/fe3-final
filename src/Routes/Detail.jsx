@@ -1,25 +1,37 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useContextStates } from "../Components/utils/global.context";
 import axios from "axios";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
+  //const { state, dispatch } = useContextStates();
+
   const param = useParams();
   const url = `https://jsonplaceholder.typicode.com/users/${param.id}`;
 
-  const [data, setData] = useState({});
+  const [data, setData] = useState({
+    id: undefined,
+    name: "Detalles de odontologos",
+    email:
+      "En esta seccion vas a encontrar información más detallada de los odontologos, si seleccionas un odontologo de la pagina Home",
+    phone: "",
+    website: "",
+  });
 
   useEffect(() => {
-    axios(url).then((response) => {
-      setData(response.data);
-      console.log(response);
-    });
-  }, []);
+    if (param.id) {
+      axios(url).then((response) => {
+        setData(response.data);
+        console.log(response);
+      });
+    }
+  }, [param.id]);
 
   return (
     <>
-      <h1>{`Detail Dentist ${param.id}`}</h1>
+      {data.id && <h1>{`Detail Dentist ${data.id}`}</h1>}
       <h2>{data.name}</h2>
       <h3>{data.email}</h3>
       <h3>{data.phone}</h3>
