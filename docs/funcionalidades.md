@@ -54,9 +54,12 @@ Se deberá tener en cuenta lo siguiente:
 
 # - La grilla deberá mostrar una [Card](/src/Components/Card.jsx) por cada dentista devuelto por la API.
 
-- -Cada dentista deberá contener `name` y `username`,
-  -junto con un boton `ADD FAV` (para agregar al localStorage como fav)
-  -y un `link` que permita su navegacion a la pagina _dentist/:id_ en base al id del dentista.
+# - -Cada dentista deberá contener `name` y `username`,
+
+# -junto con un boton `ADD FAV` (para agregar al localStorage como fav)
+
+-y un `link` que permita su navegacion a la pagina _dentist/:id_ en base al id del dentista.
+
 - Cada Card debe integrar la funcionalidad de agregar a destacados
 
 ### Pagina 2: Contacto

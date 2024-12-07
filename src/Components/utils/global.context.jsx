@@ -8,7 +8,7 @@ import React, {
 import axios from "axios";
 import funReducer from "./reducer";
 
-const initialState = { theme: "", data: [] };
+const initialState = { theme: "", data: [], favs: new Map() };
 
 const ContextGlobal = createContext();
 
@@ -26,16 +26,8 @@ const ContextProvider = ({ children }) => {
     });
   }, []);
 
-  /*
-  const value = useMemo(
-    () => ({ data, setData }),
-    [data]
-  );
-
-  */
-
   return (
-    <ContextGlobal.Provider value={{ state }}>
+    <ContextGlobal.Provider value={{ state, dispatch }}>
       {children}
     </ContextGlobal.Provider>
   );
