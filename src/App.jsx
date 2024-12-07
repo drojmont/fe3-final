@@ -7,7 +7,7 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/home");
+    //navigate("/home");
   }, []);
 
   return (

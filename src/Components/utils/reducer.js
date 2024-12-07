@@ -4,7 +4,7 @@ const funReducer = (state, action) => {
       return { ...state, data: action.payload };
 
     case "FAVS":
-      sessionStorage.setItem(
+      localStorage.setItem(
         action.payload[0],
         JSON.stringify(action.payload[1])
       );
