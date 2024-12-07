@@ -9,7 +9,7 @@ import axios from "axios";
 import funReducer from "./reducer";
 
 const initialState = {
-  theme: "",
+  theme: false,
   data: [],
   favs: new Map(),
   detailsid: undefined,

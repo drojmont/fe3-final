@@ -16,6 +16,9 @@ const funReducer = (state, action) => {
     case "DETAILS":
       return { ...state, detailsid: action.payload };
 
+    case "TOGGLETHEME":
+      return { ...state, theme: !state.theme };
+
     default:
       state;
   }

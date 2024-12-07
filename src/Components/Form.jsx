@@ -1,7 +1,8 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FormCard from "./utils/FormCard";
 import FormAviso from "./utils/FormAviso";
+import { useContextStates } from "./utils/global.context";
 
 const Form = () => {
   const [count, setCount] = useState(0);
@@ -16,6 +17,18 @@ const Form = () => {
   const [error, setError] = useState("");
   const nombreRegex = /^[A-Za-z ]{5,}$/;
   const emailRegex = /^[A-Za-z0-9]{2,}@[A-Za-z0-9]{2,}\.[A-Za-z.]+$/;
+
+  const { state, dispatch } = useContextStates();
+
+  useEffect(() => {
+    const elemento = document.getElementById("formulario");
+    console.log(elemento);
+    if (state.theme) {
+      elemento.classList.add("dark");
+    } else {
+      elemento.classList.remove("dark");
+    }
+  }, [state.theme]);
 
   const eventHandler = (event) => {
     event.preventDefault();
@@ -33,7 +46,7 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <div id="formulario">
       <FormAviso mensaje={error} />
       {mostrarAvisoConfirmacion ? <FormCard datos={usuario} /> : null}
       <form onSubmit={eventHandler}>

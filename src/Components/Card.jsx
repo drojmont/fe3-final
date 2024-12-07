@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useContextStates } from "./utils/global.context";
 import { Link } from "react-router-dom";
 
 const Card = ({ name, username, id }) => {
   const { state, dispatch } = useContextStates();
+
+  useEffect(() => {
+    const elemento = document.querySelector(".card");
+    console.log(elemento);
+    if (state.theme) {
+      elemento.classList.add("dark");
+    } else {
+      elemento.classList.remove("dark");
+    }
+  }, [state.theme]);
 
   const addFav = () => {
     // Aqui iria la logica para agregar la Card en el localStorage
